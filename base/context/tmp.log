@@ -1,0 +1,1157 @@
+"".main STEXT size=480 args=0x0 locals=0x98 funcid=0x0 align=0x0
+	0x0000 00000 (context.go:11)	TEXT	"".main(SB), ABIInternal, $160-0
+	0x0000 00000 (context.go:11)	MOVD	16(g), R16
+	0x0004 00004 (context.go:11)	PCDATA	$0, $-2
+	0x0004 00004 (context.go:11)	SUB	$32, RSP, R17
+	0x0008 00008 (context.go:11)	CMP	R16, R17
+	0x000c 00012 (context.go:11)	BLS	464
+	0x0010 00016 (context.go:11)	PCDATA	$0, $-1
+	0x0010 00016 (context.go:11)	MOVD.W	R30, -160(RSP)
+	0x0014 00020 (context.go:11)	MOVD	R29, -8(RSP)
+	0x0018 00024 (context.go:11)	SUB	$8, RSP, R29
+	0x001c 00028 (context.go:11)	MOVD	ZR, 144(RSP)
+	0x0020 00032 (context.go:11)	FUNCDATA	ZR, gclocals·3e27b3aa6b89137cce48b3379a2a6610(SB)
+	0x0020 00032 (context.go:11)	FUNCDATA	$1, gclocals·d613c0650974495413ffac8a4148e908(SB)
+	0x0020 00032 (context.go:11)	FUNCDATA	$2, "".main.stkobj(SB)
+	0x0020 00032 (context.go:11)	FUNCDATA	$4, "".main.opendefer(SB)
+	0x0020 00032 (context.go:11)	MOVB	ZR, ""..autotmp_24-97(SP)
+	0x0024 00036 (<unknown line number>)	NOP
+	0x0024 00036 (<unknown line number>)	PCDATA	$0, $-3
+	0x0024 00036 ($GOROOT/src/context/context.go:209)	MOVD	context.background(SB), R1
+	0x0030 00048 ($GOROOT/src/context/context.go:209)	PCDATA	$0, $-1
+	0x0030 00048 (context.go:13)	MOVD	$go.itab.*context.emptyCtx,context.Context(SB), R0
+	0x0038 00056 (context.go:13)	PCDATA	$1, $1
+	0x0038 00056 (context.go:13)	CALL	context.WithCancel(SB)
+	0x003c 00060 (context.go:23)	MOVD	R0, ""..autotmp_33-48(SP)
+	0x0040 00064 (context.go:23)	MOVD	R1, "".ctx.data-64(SP)
+	0x0044 00068 (context.go:13)	MOVD	R2, "".cancel-56(SP)
+	0x0048 00072 (context.go:15)	MOVD	$type.chan int(SB), R0
+	0x0050 00080 (context.go:15)	MOVD	$10, R1
+	0x0054 00084 (context.go:15)	PCDATA	$1, $2
+	0x0054 00084 (context.go:15)	CALL	runtime.makechan(SB)
+	0x0058 00088 (context.go:15)	MOVD	R0, "".messages-72(SP)
+	0x005c 00092 (context.go:16)	STP	(ZR, ZR), ""..autotmp_20-24(SP)
+	0x0060 00096 (context.go:16)	MOVD	$"".main.func1(SB), R2
+	0x0068 00104 (context.go:16)	MOVD	R2, ""..autotmp_20-24(SP)
+	0x006c 00108 (context.go:16)	MOVD	R0, ""..autotmp_20-16(SP)
+	0x0070 00112 (context.go:16)	MOVD	$""..autotmp_20-24(SP), R2
+	0x0074 00116 (context.go:16)	MOVD	R2, ""..autotmp_25-8(SP)
+	0x0078 00120 (context.go:16)	MOVD	$1, R2
+	0x007c 00124 (context.go:16)	MOVB	R2, ""..autotmp_24-97(SP)
+	0x0080 00128 (context.go:16)	MOVD	ZR, R1
+	0x0084 00132 (context.go:18)	JMP	164
+	0x0088 00136 (context.go:18)	MOVD	R1, "".i-88(SP)
+	0x008c 00140 (context.go:19)	MOVD	R1, ""..autotmp_17-80(SP)
+	0x0090 00144 (context.go:19)	MOVD	$""..autotmp_17-80(SP), R1
+	0x0094 00148 (context.go:19)	PCDATA	$1, $3
+	0x0094 00148 (context.go:19)	CALL	runtime.chansend1(SB)
+	0x0098 00152 (context.go:18)	MOVD	"".i-88(SP), R2
+	0x009c 00156 (context.go:18)	ADD	$1, R2, R1
+	0x00a0 00160 (context.go:19)	MOVD	"".messages-72(SP), R0
+	0x00a4 00164 (context.go:18)	CMP	$10, R1
+	0x00a8 00168 (context.go:18)	BLT	136
+	0x00ac 00172 (context.go:18)	MOVD	$1, R1
+	0x00b0 00176 (context.go:18)	JMP	196
+	0x00b4 00180 (context.go:23)	CALL	runtime.newproc(SB)
+	0x00b8 00184 (context.go:22)	MOVD	"".i-96(SP), R1
+	0x00bc 00188 (context.go:22)	ADD	$1, R1, R1
+	0x00c0 00192 (context.go:23)	MOVD	"".messages-72(SP), R0
+	0x00c4 00196 (context.go:22)	CMP	$3, R1
+	0x00c8 00200 (context.go:22)	BGT	316
+	0x00cc 00204 (context.go:22)	MOVD	R1, "".i-96(SP)
+	0x00d0 00208 (context.go:23)	MOVD	$type.noalg.struct { F uintptr; ""..autotmp_12 int; ""..autotmp_13 context.Context; ""..autotmp_14 <-chan int }(SB), R0
+	0x00d8 00216 (context.go:23)	CALL	runtime.newobject(SB)
+	0x00dc 00220 (context.go:23)	MOVD	$"".main.func2(SB), R1
+	0x00e4 00228 (context.go:23)	MOVD	R1, (R0)
+	0x00e8 00232 (context.go:23)	MOVD	"".i-96(SP), R2
+	0x00ec 00236 (context.go:23)	MOVD	R2, 8(R0)
+	0x00f0 00240 (context.go:23)	MOVD	""..autotmp_33-48(SP), R3
+	0x00f4 00244 (context.go:23)	MOVD	R3, 16(R0)
+	0x00f8 00248 (context.go:23)	PCDATA	ZR, $-2
+	0x00f8 00248 (context.go:23)	MOVWU	runtime.writeBarrier(SB), R4
+	0x0104 00260 (context.go:23)	CBNZW	R4, 284
+	0x0108 00264 (context.go:23)	MOVD	"".ctx.data-64(SP), R4
+	0x010c 00268 (context.go:23)	MOVD	R4, 24(R0)
+	0x0110 00272 (context.go:23)	MOVD	"".messages-72(SP), R5
+	0x0114 00276 (context.go:23)	MOVD	R5, 32(R0)
+	0x0118 00280 (context.go:23)	JMP	180
+	0x011c 00284 (context.go:23)	ADD	$24, R0, R4
+	0x0120 00288 (context.go:23)	MOVD	R4, R2
+	0x0124 00292 (context.go:23)	MOVD	"".ctx.data-64(SP), R3
+	0x0128 00296 (context.go:23)	CALL	runtime.gcWriteBarrier(SB)
+	0x012c 00300 (context.go:23)	ADD	$32, R0, R2
+	0x0130 00304 (context.go:23)	MOVD	"".messages-72(SP), R3
+	0x0134 00308 (context.go:23)	CALL	runtime.gcWriteBarrier(SB)
+	0x0138 00312 (context.go:23)	JMP	180
+	0x013c 00316 (context.go:25)	PCDATA	ZR, $-1
+	0x013c 00316 (context.go:25)	MOVD	$3000000000, R0
+	0x0144 00324 (context.go:25)	PCDATA	$1, $4
+	0x0144 00324 (context.go:25)	CALL	time.Sleep(SB)
+	0x0148 00328 (context.go:26)	MOVD	"".cancel-56(SP), R26
+	0x014c 00332 (context.go:26)	MOVD	(R26), R1
+	0x0150 00336 (context.go:26)	PCDATA	$1, $1
+	0x0150 00336 (context.go:26)	CALL	(R1)
+	0x0154 00340 (context.go:27)	MOVD	$2000000000, R0
+	0x015c 00348 (context.go:27)	CALL	time.Sleep(SB)
+	0x0160 00352 (context.go:28)	STP	(ZR, ZR), ""..autotmp_23-40(SP)
+	0x0164 00356 (context.go:28)	MOVD	$type.string(SB), R1
+	0x016c 00364 (context.go:28)	MOVD	R1, ""..autotmp_23-40(SP)
+	0x0170 00368 (context.go:28)	MOVD	$""..stmp_0(SB), R1
+	0x0178 00376 (context.go:28)	MOVD	R1, ""..autotmp_23-32(SP)
+	0x017c 00380 (<unknown line number>)	NOP
+	0x017c 00380 (<unknown line number>)	PCDATA	$0, $-4
+	0x017c 00380 ($GOROOT/src/fmt/print.go:274)	MOVD	os.Stdout(SB), R1
+	0x0188 00392 ($GOROOT/src/fmt/print.go:274)	PCDATA	$0, $-1
+	0x0188 00392 ($GOROOT/src/fmt/print.go:274)	MOVD	$go.itab.*os.File,io.Writer(SB), R0
+	0x0190 00400 ($GOROOT/src/fmt/print.go:274)	MOVD	$""..autotmp_23-40(SP), R2
+	0x0194 00404 ($GOROOT/src/fmt/print.go:274)	MOVD	$1, R3
+	0x0198 00408 ($GOROOT/src/fmt/print.go:274)	MOVD	R3, R4
+	0x019c 00412 ($GOROOT/src/fmt/print.go:274)	CALL	fmt.Fprintln(SB)
+	0x01a0 00416 ($GOROOT/src/fmt/print.go:274)	MOVD	R0, ""..autotmp_17-80(SP)
+	0x01a4 00420 (context.go:29)	MOVB	ZR, ""..autotmp_24-97(SP)
+	0x01a8 00424 (context.go:29)	MOVD	""..autotmp_25-8(SP), R26
+	0x01ac 00428 (context.go:29)	MOVD	(R26), R1
+	0x01b0 00432 (context.go:29)	CALL	(R1)
+	0x01b4 00436 (context.go:29)	MOVD	-8(RSP), R29
+	0x01b8 00440 (context.go:29)	MOVD.P	160(RSP), R30
+	0x01bc 00444 (context.go:29)	RET	(R30)
+	0x01c0 00448 (context.go:29)	CALL	runtime.deferreturn(SB)
+	0x01c4 00452 (context.go:29)	MOVD	-8(RSP), R29
+	0x01c8 00456 (context.go:29)	MOVD.P	160(RSP), R30
+	0x01cc 00460 (context.go:29)	RET	(R30)
+	0x01d0 00464 (context.go:29)	NOP
+	0x01d0 00464 (context.go:11)	PCDATA	$1, $-1
+	0x01d0 00464 (context.go:11)	PCDATA	$0, $-2
+	0x01d0 00464 (context.go:11)	MOVD	R30, R3
+	0x01d4 00468 (context.go:11)	CALL	runtime.morestack_noctxt(SB)
+	0x01d8 00472 (context.go:11)	PCDATA	$0, $-1
+	0x01d8 00472 (context.go:11)	JMP	0
+	0x0000 90 0b 40 f9 f1 83 00 d1 3f 02 10 eb 29 0e 00 54  ..@.....?...)..T
+	0x0010 fe 0f 16 f8 fd 83 1f f8 fd 23 00 d1 ff 4b 00 f9  .........#...K..
+	0x0020 ff df 00 39 1b 00 00 90 7b 03 00 91 61 03 40 f9  ...9....{...a.@.
+	0x0030 00 00 00 90 00 00 00 91 00 00 00 94 e0 37 00 f9  .............7..
+	0x0040 e1 2f 00 f9 e2 33 00 f9 00 00 00 90 00 00 00 91  ./...3..........
+	0x0050 41 01 80 d2 00 00 00 94 e0 2b 00 f9 ff 7f 08 a9  A........+......
+	0x0060 02 00 00 90 42 00 00 91 e2 43 00 f9 e0 47 00 f9  ....B....C...G..
+	0x0070 e2 03 02 91 e2 4b 00 f9 e2 03 40 b2 e2 df 00 39  .....K....@....9
+	0x0080 01 00 80 d2 08 00 00 14 e1 23 00 f9 e1 27 00 f9  .........#...'..
+	0x0090 e1 23 01 91 00 00 00 94 e2 23 40 f9 41 04 00 91  .#.......#@.A...
+	0x00a0 e0 2b 40 f9 3f 28 00 f1 0b ff ff 54 e1 03 40 b2  .+@.?(.....T..@.
+	0x00b0 05 00 00 14 00 00 00 94 e1 1f 40 f9 21 04 00 91  ..........@.!...
+	0x00c0 e0 2b 40 f9 3f 0c 00 f1 ac 03 00 54 e1 1f 00 f9  .+@.?......T....
+	0x00d0 00 00 00 90 00 00 00 91 00 00 00 94 01 00 00 90  ................
+	0x00e0 21 00 00 91 01 00 00 f9 e2 1f 40 f9 02 04 00 f9  !.........@.....
+	0x00f0 e3 37 40 f9 03 08 00 f9 1b 00 00 90 7b 03 00 91  .7@.........{...
+	0x0100 64 03 40 b9 c4 00 00 35 e4 2f 40 f9 04 0c 00 f9  d.@....5./@.....
+	0x0110 e5 2b 40 f9 05 10 00 f9 e7 ff ff 17 04 60 00 91  .+@..........`..
+	0x0120 e2 03 04 aa e3 2f 40 f9 00 00 00 94 02 80 00 91  ...../@.........
+	0x0130 e3 2b 40 f9 00 00 00 94 df ff ff 17 00 c0 8b d2  .+@.............
+	0x0140 00 5a b6 f2 00 00 00 94 fa 33 40 f9 41 03 40 f9  .Z.......3@.A.@.
+	0x0150 20 00 3f d6 00 80 92 d2 a0 e6 ae f2 00 00 00 94   .?.............
+	0x0160 ff 7f 07 a9 01 00 00 90 21 00 00 91 e1 3b 00 f9  ........!....;..
+	0x0170 01 00 00 90 21 00 00 91 e1 3f 00 f9 1b 00 00 90  ....!....?......
+	0x0180 7b 03 00 91 61 03 40 f9 00 00 00 90 00 00 00 91  {...a.@.........
+	0x0190 e2 c3 01 91 e3 03 40 b2 e4 03 03 aa 00 00 00 94  ......@.........
+	0x01a0 e0 27 00 f9 ff df 00 39 fa 4b 40 f9 41 03 40 f9  .'.....9.K@.A.@.
+	0x01b0 20 00 3f d6 fd 83 5f f8 fe 07 4a f8 c0 03 5f d6   .?..._...J..._.
+	0x01c0 00 00 00 94 fd 83 5f f8 fe 07 4a f8 c0 03 5f d6  ......_...J..._.
+	0x01d0 e3 03 1e aa 00 00 00 94 8a ff ff 17 00 00 00 00  ................
+	rel 0+0 t=23 type.*context.emptyCtx+0
+	rel 0+0 t=23 type.string+0
+	rel 0+0 t=23 type.*os.File+0
+	rel 36+8 t=3 context.background+0
+	rel 48+8 t=3 go.itab.*context.emptyCtx,context.Context+0
+	rel 56+4 t=9 context.WithCancel+0
+	rel 72+8 t=3 type.chan int+0
+	rel 84+4 t=9 runtime.makechan+0
+	rel 96+8 t=3 "".main.func1+0
+	rel 148+4 t=9 runtime.chansend1+0
+	rel 180+4 t=9 runtime.newproc+0
+	rel 208+8 t=3 type.noalg.struct { F uintptr; ""..autotmp_12 int; ""..autotmp_13 context.Context; ""..autotmp_14 <-chan int }+0
+	rel 216+4 t=9 runtime.newobject+0
+	rel 220+8 t=3 "".main.func2+0
+	rel 248+8 t=3 runtime.writeBarrier+0
+	rel 296+4 t=9 runtime.gcWriteBarrier+0
+	rel 308+4 t=9 runtime.gcWriteBarrier+0
+	rel 324+4 t=9 time.Sleep+0
+	rel 336+0 t=10 +0
+	rel 348+4 t=9 time.Sleep+0
+	rel 356+8 t=3 type.string+0
+	rel 368+8 t=3 ""..stmp_0+0
+	rel 380+8 t=3 os.Stdout+0
+	rel 392+8 t=3 go.itab.*os.File,io.Writer+0
+	rel 412+4 t=9 fmt.Fprintln+0
+	rel 432+0 t=10 +0
+	rel 448+4 t=9 runtime.deferreturn+0
+	rel 468+4 t=9 runtime.morestack_noctxt+0
+"".main.func2 STEXT size=112 args=0x0 locals=0x28 funcid=0x15 align=0x0
+	0x0000 00000 (context.go:23)	TEXT	"".main.func2(SB), WRAPPER|NEEDCTXT|ABIInternal, $48-0
+	0x0000 00000 (context.go:23)	MOVD	16(g), R16
+	0x0004 00004 (context.go:23)	PCDATA	$0, $-2
+	0x0004 00004 (context.go:23)	MOVD	RSP, R17
+	0x0008 00008 (context.go:23)	CMP	R16, R17
+	0x000c 00012 (context.go:23)	BLS	68
+	0x0010 00016 (context.go:23)	PCDATA	$0, $-1
+	0x0010 00016 (context.go:23)	MOVD.W	R30, -48(RSP)
+	0x0014 00020 (context.go:23)	MOVD	R29, -8(RSP)
+	0x0018 00024 (context.go:23)	SUB	$8, RSP, R29
+	0x001c 00028 (context.go:23)	MOVD	32(g), R16
+	0x0020 00032 (context.go:23)	CBNZ	R16, 80
+	0x0024 00036 (context.go:23)	NOP
+	0x0024 00036 (context.go:23)	FUNCDATA	ZR, gclocals·33cdeccccebe80329f1fdbee7f5874cb(SB)
+	0x0024 00036 (context.go:23)	FUNCDATA	$1, gclocals·33cdeccccebe80329f1fdbee7f5874cb(SB)
+	0x0024 00036 (context.go:23)	FUNCDATA	$7, "".sub_process.wrapinfo(SB)
+	0x0024 00036 (context.go:23)	MOVD	16(R26), R1
+	0x0028 00040 (context.go:23)	MOVD	24(R26), R2
+	0x002c 00044 (context.go:23)	MOVD	32(R26), R3
+	0x0030 00048 (context.go:23)	MOVD	8(R26), R0
+	0x0034 00052 (context.go:23)	PCDATA	$1, ZR
+	0x0034 00052 (context.go:23)	CALL	"".sub_process(SB)
+	0x0038 00056 (context.go:23)	MOVD	-8(RSP), R29
+	0x003c 00060 (context.go:23)	MOVD.P	48(RSP), R30
+	0x0040 00064 (context.go:23)	RET	(R30)
+	0x0044 00068 (context.go:23)	NOP
+	0x0044 00068 (context.go:23)	PCDATA	$1, $-1
+	0x0044 00068 (context.go:23)	PCDATA	$0, $-2
+	0x0044 00068 (context.go:23)	MOVD	R30, R3
+	0x0048 00072 (context.go:23)	CALL	runtime.morestack(SB)
+	0x004c 00076 (context.go:23)	PCDATA	$0, $-1
+	0x004c 00076 (context.go:23)	JMP	0
+	0x0050 00080 (context.go:23)	MOVD	(R16), R17
+	0x0054 00084 (context.go:23)	ADD	$56, RSP, R20
+	0x0058 00088 (context.go:23)	CMP	R17, R20
+	0x005c 00092 (context.go:23)	BNE	36
+	0x0060 00096 (context.go:23)	ADD	$8, RSP, R20
+	0x0064 00100 (context.go:23)	MOVD	R20, (R16)
+	0x0068 00104 (context.go:23)	JMP	36
+	0x0000 90 0b 40 f9 f1 03 00 91 3f 02 10 eb c9 01 00 54  ..@.....?......T
+	0x0010 fe 0f 1d f8 fd 83 1f f8 fd 23 00 d1 90 13 40 f9  .........#....@.
+	0x0020 90 01 00 b5 41 0b 40 f9 42 0f 40 f9 43 13 40 f9  ....A.@.B.@.C.@.
+	0x0030 40 07 40 f9 00 00 00 94 fd 83 5f f8 fe 07 43 f8  @.@......._...C.
+	0x0040 c0 03 5f d6 e3 03 1e aa 00 00 00 94 ed ff ff 17  .._.............
+	0x0050 11 02 40 f9 f4 e3 00 91 9f 02 11 eb 41 fe ff 54  ..@.........A..T
+	0x0060 f4 23 00 91 14 02 00 f9 ef ff ff 17 00 00 00 00  .#..............
+	rel 52+4 t=9 "".sub_process+0
+	rel 72+4 t=9 runtime.morestack+0
+"".main.func1 STEXT size=96 args=0x0 locals=0x18 funcid=0x15 align=0x0
+	0x0000 00000 (context.go:16)	TEXT	"".main.func1(SB), WRAPPER|NEEDCTXT|ABIInternal, $32-0
+	0x0000 00000 (context.go:16)	MOVD	16(g), R16
+	0x0004 00004 (context.go:16)	PCDATA	$0, $-2
+	0x0004 00004 (context.go:16)	MOVD	RSP, R17
+	0x0008 00008 (context.go:16)	CMP	R16, R17
+	0x000c 00012 (context.go:16)	BLS	56
+	0x0010 00016 (context.go:16)	PCDATA	$0, $-1
+	0x0010 00016 (context.go:16)	MOVD.W	R30, -32(RSP)
+	0x0014 00020 (context.go:16)	MOVD	R29, -8(RSP)
+	0x0018 00024 (context.go:16)	SUB	$8, RSP, R29
+	0x001c 00028 (context.go:16)	MOVD	32(g), R16
+	0x0020 00032 (context.go:16)	CBNZ	R16, 68
+	0x0024 00036 (context.go:16)	NOP
+	0x0024 00036 (context.go:16)	FUNCDATA	ZR, gclocals·33cdeccccebe80329f1fdbee7f5874cb(SB)
+	0x0024 00036 (context.go:16)	FUNCDATA	$1, gclocals·33cdeccccebe80329f1fdbee7f5874cb(SB)
+	0x0024 00036 (context.go:16)	MOVD	8(R26), R0
+	0x0028 00040 (context.go:16)	PCDATA	$1, ZR
+	0x0028 00040 (context.go:16)	CALL	runtime.closechan(SB)
+	0x002c 00044 (context.go:16)	MOVD	-8(RSP), R29
+	0x0030 00048 (context.go:16)	MOVD.P	32(RSP), R30
+	0x0034 00052 (context.go:16)	RET	(R30)
+	0x0038 00056 (context.go:16)	NOP
+	0x0038 00056 (context.go:16)	PCDATA	$1, $-1
+	0x0038 00056 (context.go:16)	PCDATA	$0, $-2
+	0x0038 00056 (context.go:16)	MOVD	R30, R3
+	0x003c 00060 (context.go:16)	CALL	runtime.morestack(SB)
+	0x0040 00064 (context.go:16)	PCDATA	$0, $-1
+	0x0040 00064 (context.go:16)	JMP	0
+	0x0044 00068 (context.go:16)	MOVD	(R16), R17
+	0x0048 00072 (context.go:16)	ADD	$40, RSP, R20
+	0x004c 00076 (context.go:16)	CMP	R17, R20
+	0x0050 00080 (context.go:16)	BNE	36
+	0x0054 00084 (context.go:16)	ADD	$8, RSP, R20
+	0x0058 00088 (context.go:16)	MOVD	R20, (R16)
+	0x005c 00092 (context.go:16)	JMP	36
+	0x0000 90 0b 40 f9 f1 03 00 91 3f 02 10 eb 69 01 00 54  ..@.....?...i..T
+	0x0010 fe 0f 1e f8 fd 83 1f f8 fd 23 00 d1 90 13 40 f9  .........#....@.
+	0x0020 30 01 00 b5 40 07 40 f9 00 00 00 94 fd 83 5f f8  0...@.@......._.
+	0x0030 fe 07 42 f8 c0 03 5f d6 e3 03 1e aa 00 00 00 94  ..B..._.........
+	0x0040 f0 ff ff 17 11 02 40 f9 f4 a3 00 91 9f 02 11 eb  ......@.........
+	0x0050 a1 fe ff 54 f4 23 00 91 14 02 00 f9 f2 ff ff 17  ...T.#..........
+	rel 40+4 t=9 runtime.closechan+0
+	rel 60+4 t=9 runtime.morestack+0
+"".sub_process STEXT size=608 args=0x20 locals=0xb8 funcid=0x0 align=0x0
+	0x0000 00000 (context.go:31)	TEXT	"".sub_process(SB), ABIInternal, $192-32
+	0x0000 00000 (context.go:31)	MOVD	16(g), R16
+	0x0004 00004 (context.go:31)	PCDATA	$0, $-2
+	0x0004 00004 (context.go:31)	SUB	$64, RSP, R17
+	0x0008 00008 (context.go:31)	CMP	R16, R17
+	0x000c 00012 (context.go:31)	BLS	552
+	0x0010 00016 (context.go:31)	PCDATA	$0, $-1
+	0x0010 00016 (context.go:31)	MOVD.W	R30, -192(RSP)
+	0x0014 00020 (context.go:31)	MOVD	R29, -8(RSP)
+	0x0018 00024 (context.go:31)	SUB	$8, RSP, R29
+	0x001c 00028 (context.go:31)	FUNCDATA	ZR, gclocals·6f4a1e03f18b58a9f5d23690b02b27f8(SB)
+	0x001c 00028 (context.go:31)	FUNCDATA	$1, gclocals·6490036fc203ff65ba670fc0513aad4a(SB)
+	0x001c 00028 (context.go:31)	FUNCDATA	$2, "".sub_process.stkobj(SB)
+	0x001c 00028 (context.go:31)	FUNCDATA	$5, "".sub_process.arginfo1(SB)
+	0x001c 00028 (context.go:31)	FUNCDATA	$6, "".sub_process.argliveinfo(SB)
+	0x001c 00028 (context.go:31)	PCDATA	$3, $1
+	0x001c 00028 (context.go:31)	MOVD	R0, "".index(FP)
+	0x0020 00032 (context.go:31)	MOVD	R3, ""..autotmp_48-96(SP)
+	0x0024 00036 (context.go:31)	MOVD	R2, "".ctx+16(FP)
+	0x0028 00040 (context.go:31)	MOVD	R1, "".ctx+8(FP)
+	0x002c 00044 (context.go:31)	PCDATA	$3, $2
+	0x002c 00044 (context.go:32)	MOVD	R1, R0
+	0x0030 00048 (context.go:32)	MOVD	R2, R1
+	0x0034 00052 (context.go:32)	PCDATA	$1, $1
+	0x0034 00052 (context.go:32)	CALL	context.WithCancel(SB)
+	0x0038 00056 (context.go:33)	MOVD	R0, ""..autotmp_49-104(SP)
+	0x003c 00060 (context.go:33)	MOVD	R1, "".newCtx.data-112(SP)
+	0x0040 00064 (context.go:33)	MOVD	$type.noalg.struct { F uintptr; ""..autotmp_16 int; ""..autotmp_17 context.Context }(SB), R0
+	0x0048 00072 (context.go:33)	PCDATA	$1, $2
+	0x0048 00072 (context.go:33)	CALL	runtime.newobject(SB)
+	0x004c 00076 (context.go:33)	MOVD	$"".sub_process.func1(SB), R2
+	0x0054 00084 (context.go:33)	MOVD	R2, (R0)
+	0x0058 00088 (context.go:33)	MOVD	"".index(FP), R2
+	0x005c 00092 (context.go:33)	MOVD	R2, 8(R0)
+	0x0060 00096 (context.go:33)	MOVD	""..autotmp_49-104(SP), R3
+	0x0064 00100 (context.go:33)	MOVD	R3, 16(R0)
+	0x0068 00104 (context.go:33)	PCDATA	ZR, $-2
+	0x0068 00104 (context.go:33)	MOVWU	runtime.writeBarrier(SB), R4
+	0x0074 00116 (context.go:33)	CBNZW	R4, 132
+	0x0078 00120 (context.go:33)	MOVD	"".newCtx.data-112(SP), R1
+	0x007c 00124 (context.go:33)	MOVD	R1, 24(R0)
+	0x0080 00128 (context.go:33)	JMP	148
+	0x0084 00132 (context.go:33)	ADD	$24, R0, R1
+	0x0088 00136 (context.go:33)	MOVD	R1, R2
+	0x008c 00140 (context.go:33)	MOVD	"".newCtx.data-112(SP), R3
+	0x0090 00144 (context.go:33)	CALL	runtime.gcWriteBarrier(SB)
+	0x0094 00148 (context.go:33)	PCDATA	ZR, $-1
+	0x0094 00148 (context.go:33)	CALL	runtime.newproc(SB)
+	0x0098 00152 (context.go:34)	MOVD	$type.noalg.struct { F uintptr; ""..autotmp_18 int; ""..autotmp_19 context.Context }(SB), R0
+	0x00a0 00160 (context.go:34)	CALL	runtime.newobject(SB)
+	0x00a4 00164 (context.go:34)	MOVD	$"".sub_process.func2(SB), R1
+	0x00ac 00172 (context.go:34)	MOVD	R1, (R0)
+	0x00b0 00176 (context.go:34)	MOVD	"".index(FP), R1
+	0x00b4 00180 (context.go:34)	MOVD	R1, 8(R0)
+	0x00b8 00184 (context.go:34)	MOVD	""..autotmp_49-104(SP), R2
+	0x00bc 00188 (context.go:34)	MOVD	R2, 16(R0)
+	0x00c0 00192 (context.go:34)	PCDATA	ZR, $-2
+	0x00c0 00192 (context.go:34)	MOVWU	runtime.writeBarrier(SB), R2
+	0x00cc 00204 (context.go:34)	CBNZW	R2, 220
+	0x00d0 00208 (context.go:34)	MOVD	"".newCtx.data-112(SP), R2
+	0x00d4 00212 (context.go:34)	MOVD	R2, 24(R0)
+	0x00d8 00216 (context.go:34)	JMP	232
+	0x00dc 00220 (context.go:34)	ADD	$24, R0, R2
+	0x00e0 00224 (context.go:34)	MOVD	"".newCtx.data-112(SP), R3
+	0x00e4 00228 (context.go:34)	CALL	runtime.gcWriteBarrier(SB)
+	0x00e8 00232 (context.go:34)	PCDATA	ZR, $-1
+	0x00e8 00232 (context.go:34)	PCDATA	$1, $1
+	0x00e8 00232 (context.go:34)	CALL	runtime.newproc(SB)
+	0x00ec 00236 (context.go:37)	JMP	364
+	0x00f0 00240 (context.go:43)	MOVD	ZR, ""..autotmp_23-120(SP)
+	0x00f4 00244 (context.go:43)	MOVD	""..autotmp_48-96(SP), R0
+	0x00f8 00248 (context.go:43)	MOVD	$""..autotmp_23-120(SP), R1
+	0x00fc 00252 (context.go:43)	CALL	runtime.chanrecv1(SB)
+	0x0100 00256 (context.go:43)	STP	(ZR, ZR), ""..autotmp_33-64(SP)
+	0x0104 00260 (context.go:43)	STP	(ZR, ZR), ""..autotmp_33-48(SP)
+	0x0108 00264 (context.go:43)	MOVD	"".index(FP), R0
+	0x010c 00268 (context.go:43)	PCDATA	$1, $3
+	0x010c 00268 (context.go:43)	CALL	runtime.convT64(SB)
+	0x0110 00272 (context.go:43)	MOVD	$type.int(SB), R2
+	0x0118 00280 (context.go:43)	MOVD	R2, ""..autotmp_33-64(SP)
+	0x011c 00284 (context.go:43)	MOVD	R0, ""..autotmp_33-56(SP)
+	0x0120 00288 (context.go:43)	MOVD	""..autotmp_23-120(SP), R0
+	0x0124 00292 (context.go:43)	CALL	runtime.convT64(SB)
+	0x0128 00296 (context.go:43)	MOVD	$type.int(SB), R2
+	0x0130 00304 (context.go:43)	MOVD	R2, ""..autotmp_33-48(SP)
+	0x0134 00308 (context.go:43)	MOVD	R0, ""..autotmp_33-40(SP)
+	0x0138 00312 (<unknown line number>)	NOP
+	0x0138 00312 (<unknown line number>)	PCDATA	$0, $-3
+	0x0138 00312 ($GOROOT/src/fmt/print.go:213)	MOVD	os.Stdout(SB), R1
+	0x0144 00324 ($GOROOT/src/fmt/print.go:213)	PCDATA	$0, $-1
+	0x0144 00324 ($GOROOT/src/fmt/print.go:213)	MOVD	$go.itab.*os.File,io.Writer(SB), R0
+	0x014c 00332 ($GOROOT/src/fmt/print.go:213)	MOVD	$36, R3
+	0x0150 00336 ($GOROOT/src/fmt/print.go:213)	MOVD	$""..autotmp_33-64(SP), R4
+	0x0154 00340 ($GOROOT/src/fmt/print.go:213)	MOVD	$2, R5
+	0x0158 00344 ($GOROOT/src/fmt/print.go:213)	MOVD	R5, R6
+	0x015c 00348 ($GOROOT/src/fmt/print.go:213)	MOVD	$go.string."[sub_process:%d]receive message: %d\n"(SB), R2
+	0x0164 00356 ($GOROOT/src/fmt/print.go:213)	PCDATA	$1, $1
+	0x0164 00356 ($GOROOT/src/fmt/print.go:213)	CALL	fmt.Fprintf(SB)
+	0x0168 00360 ($GOROOT/src/fmt/print.go:213)	MOVD	R0, ""..autotmp_23-120(SP)
+	0x016c 00364 (context.go:37)	MOVD	$1000000000, R0
+	0x0174 00372 (context.go:37)	CALL	time.Sleep(SB)
+	0x0178 00376 (context.go:39)	MOVD	"".ctx+8(FP), R1
+	0x017c 00380 (context.go:39)	MOVD	32(R1), R2
+	0x0180 00384 (context.go:39)	MOVD	"".ctx+16(FP), R0
+	0x0184 00388 (context.go:39)	CALL	(R2)
+	0x0188 00392 (context.go:39)	MOVD	R0, R1
+	0x018c 00396 (context.go:39)	MOVD	ZR, R0
+	0x0190 00400 (context.go:39)	CALL	runtime.selectnbrecv(SB)
+	0x0194 00404 (context.go:39)	CBZ	R0, 240
+	0x0198 00408 (context.go:40)	PCDATA	$1, $4
+	0x0198 00408 (context.go:40)	CALL	time.Now(SB)
+	0x019c 00412 (context.go:40)	MOVD	R0, ""..autotmp_22-88(SP)
+	0x01a0 00416 (context.go:40)	MOVD	R1, ""..autotmp_22-80(SP)
+	0x01a4 00420 (context.go:40)	MOVD	R2, ""..autotmp_22-72(SP)
+	0x01a8 00424 (context.go:40)	STP	(ZR, ZR), ""..autotmp_29-32(SP)
+	0x01ac 00428 (context.go:40)	STP	(ZR, ZR), ""..autotmp_29-16(SP)
+	0x01b0 00432 (context.go:40)	MOVD	"".index(FP), R0
+	0x01b4 00436 (context.go:40)	PCDATA	$1, $5
+	0x01b4 00436 (context.go:40)	CALL	runtime.convT64(SB)
+	0x01b8 00440 (context.go:40)	MOVD	$type.int(SB), R1
+	0x01c0 00448 (context.go:40)	MOVD	R1, ""..autotmp_29-32(SP)
+	0x01c4 00452 (context.go:40)	MOVD	R0, ""..autotmp_29-24(SP)
+	0x01c8 00456 (context.go:40)	MOVD	$type.time.Time(SB), R0
+	0x01d0 00464 (context.go:40)	MOVD	$""..autotmp_22-88(SP), R1
+	0x01d4 00468 (context.go:40)	PCDATA	$1, $6
+	0x01d4 00468 (context.go:40)	CALL	runtime.convT(SB)
+	0x01d8 00472 (context.go:40)	MOVD	$type.time.Time(SB), R1
+	0x01e0 00480 (context.go:40)	MOVD	R1, ""..autotmp_29-16(SP)
+	0x01e4 00484 (context.go:40)	MOVD	R0, ""..autotmp_29-8(SP)
+	0x01e8 00488 (<unknown line number>)	NOP
+	0x01e8 00488 (<unknown line number>)	PCDATA	$0, $-4
+	0x01e8 00488 ($GOROOT/src/fmt/print.go:213)	MOVD	os.Stdout(SB), R1
+	0x01f4 00500 ($GOROOT/src/fmt/print.go:213)	PCDATA	$0, $-1
+	0x01f4 00500 ($GOROOT/src/fmt/print.go:213)	MOVD	$go.itab.*os.File,io.Writer(SB), R0
+	0x01fc 00508 ($GOROOT/src/fmt/print.go:213)	MOVD	$go.string."[sub_process:%d]main goroutine notify to current sub process when %v.\n"(SB), R2
+	0x0204 00516 ($GOROOT/src/fmt/print.go:213)	MOVD	$70, R3
+	0x0208 00520 ($GOROOT/src/fmt/print.go:213)	MOVD	$""..autotmp_29-32(SP), R4
+	0x020c 00524 ($GOROOT/src/fmt/print.go:213)	MOVD	$2, R5
+	0x0210 00528 ($GOROOT/src/fmt/print.go:213)	MOVD	R5, R6
+	0x0214 00532 ($GOROOT/src/fmt/print.go:213)	PCDATA	$1, $4
+	0x0214 00532 ($GOROOT/src/fmt/print.go:213)	CALL	fmt.Fprintf(SB)
+	0x0218 00536 ($GOROOT/src/fmt/print.go:213)	MOVD	R0, ""..autotmp_23-120(SP)
+	0x021c 00540 (context.go:46)	MOVD	-8(RSP), R29
+	0x0220 00544 (context.go:46)	MOVD.P	192(RSP), R30
+	0x0224 00548 (context.go:46)	RET	(R30)
+	0x0228 00552 (context.go:46)	NOP
+	0x0228 00552 (context.go:31)	PCDATA	$1, $-1
+	0x0228 00552 (context.go:31)	PCDATA	$0, $-2
+	0x0228 00552 (context.go:31)	MOVD	R0, 8(RSP)
+	0x022c 00556 (context.go:31)	MOVD	R1, 16(RSP)
+	0x0230 00560 (context.go:31)	MOVD	R2, 24(RSP)
+	0x0234 00564 (context.go:31)	MOVD	R3, 32(RSP)
+	0x0238 00568 (context.go:31)	MOVD	R30, R3
+	0x023c 00572 (context.go:31)	CALL	runtime.morestack_noctxt(SB)
+	0x0240 00576 (context.go:31)	MOVD	8(RSP), R0
+	0x0244 00580 (context.go:31)	MOVD	16(RSP), R1
+	0x0248 00584 (context.go:31)	MOVD	24(RSP), R2
+	0x024c 00588 (context.go:31)	MOVD	32(RSP), R3
+	0x0250 00592 (context.go:31)	PCDATA	$0, $-1
+	0x0250 00592 (context.go:31)	JMP	0
+	0x0000 90 0b 40 f9 f1 03 01 d1 3f 02 10 eb e9 10 00 54  ..@.....?......T
+	0x0010 fe 0f 14 f8 fd 83 1f f8 fd 23 00 d1 e0 67 00 f9  .........#...g..
+	0x0020 e3 2f 00 f9 e2 6f 00 f9 e1 6b 00 f9 e0 03 01 aa  ./...o...k......
+	0x0030 e1 03 02 aa 00 00 00 94 e0 2b 00 f9 e1 27 00 f9  .........+...'..
+	0x0040 00 00 00 90 00 00 00 91 00 00 00 94 02 00 00 90  ................
+	0x0050 42 00 00 91 02 00 00 f9 e2 67 40 f9 02 04 00 f9  B........g@.....
+	0x0060 e3 2b 40 f9 03 08 00 f9 1b 00 00 90 7b 03 00 91  .+@.........{...
+	0x0070 64 03 40 b9 84 00 00 35 e1 27 40 f9 01 0c 00 f9  d.@....5.'@.....
+	0x0080 05 00 00 14 01 60 00 91 e2 03 01 aa e3 27 40 f9  .....`.......'@.
+	0x0090 00 00 00 94 00 00 00 94 00 00 00 90 00 00 00 91  ................
+	0x00a0 00 00 00 94 01 00 00 90 21 00 00 91 01 00 00 f9  ........!.......
+	0x00b0 e1 67 40 f9 01 04 00 f9 e2 2b 40 f9 02 08 00 f9  .g@......+@.....
+	0x00c0 1b 00 00 90 7b 03 00 91 62 03 40 b9 82 00 00 35  ....{...b.@....5
+	0x00d0 e2 27 40 f9 02 0c 00 f9 04 00 00 14 02 60 00 91  .'@..........`..
+	0x00e0 e3 27 40 f9 00 00 00 94 00 00 00 94 20 00 00 14  .'@......... ...
+	0x00f0 ff 23 00 f9 e0 2f 40 f9 e1 03 01 91 00 00 00 94  .#.../@.........
+	0x0100 ff ff 07 a9 ff ff 08 a9 e0 67 40 f9 00 00 00 94  .........g@.....
+	0x0110 02 00 00 90 42 00 00 91 e2 3f 00 f9 e0 43 00 f9  ....B....?...C..
+	0x0120 e0 23 40 f9 00 00 00 94 02 00 00 90 42 00 00 91  .#@.........B...
+	0x0130 e2 47 00 f9 e0 4b 00 f9 1b 00 00 90 7b 03 00 91  .G...K......{...
+	0x0140 61 03 40 f9 00 00 00 90 00 00 00 91 83 04 80 d2  a.@.............
+	0x0150 e4 e3 01 91 e5 03 7f b2 e6 03 05 aa 02 00 00 90  ................
+	0x0160 42 00 00 91 00 00 00 94 e0 23 00 f9 00 40 99 d2  B........#...@..
+	0x0170 40 73 a7 f2 00 00 00 94 e1 6b 40 f9 22 10 40 f9  @s.......k@.".@.
+	0x0180 e0 6f 40 f9 40 00 3f d6 e1 03 00 aa 00 00 80 d2  .o@.@.?.........
+	0x0190 00 00 00 94 e0 fa ff b4 00 00 00 94 e0 33 00 f9  .............3..
+	0x01a0 e1 37 00 f9 e2 3b 00 f9 ff ff 09 a9 ff ff 0a a9  .7...;..........
+	0x01b0 e0 67 40 f9 00 00 00 94 01 00 00 90 21 00 00 91  .g@.........!...
+	0x01c0 e1 4f 00 f9 e0 53 00 f9 00 00 00 90 00 00 00 91  .O...S..........
+	0x01d0 e1 83 01 91 00 00 00 94 01 00 00 90 21 00 00 91  ............!...
+	0x01e0 e1 57 00 f9 e0 5b 00 f9 1b 00 00 90 7b 03 00 91  .W...[......{...
+	0x01f0 61 03 40 f9 00 00 00 90 00 00 00 91 02 00 00 90  a.@.............
+	0x0200 42 00 00 91 c3 08 80 d2 e4 63 02 91 e5 03 7f b2  B........c......
+	0x0210 e6 03 05 aa 00 00 00 94 e0 23 00 f9 fd 83 5f f8  .........#...._.
+	0x0220 fe 07 4c f8 c0 03 5f d6 e0 07 00 f9 e1 0b 00 f9  ..L..._.........
+	0x0230 e2 0f 00 f9 e3 13 00 f9 e3 03 1e aa 00 00 00 94  ................
+	0x0240 e0 07 40 f9 e1 0b 40 f9 e2 0f 40 f9 e3 13 40 f9  ..@...@...@...@.
+	0x0250 6c ff ff 17 00 00 00 00 00 00 00 00 00 00 00 00  l...............
+	rel 0+0 t=24 type.context.Context+104
+	rel 0+0 t=23 type.int+0
+	rel 0+0 t=23 type.time.Time+0
+	rel 0+0 t=23 type.*os.File+0
+	rel 0+0 t=23 type.int+0
+	rel 0+0 t=23 type.int+0
+	rel 0+0 t=23 type.*os.File+0
+	rel 52+4 t=9 context.WithCancel+0
+	rel 64+8 t=3 type.noalg.struct { F uintptr; ""..autotmp_16 int; ""..autotmp_17 context.Context }+0
+	rel 72+4 t=9 runtime.newobject+0
+	rel 76+8 t=3 "".sub_process.func1+0
+	rel 104+8 t=3 runtime.writeBarrier+0
+	rel 144+4 t=9 runtime.gcWriteBarrier+0
+	rel 148+4 t=9 runtime.newproc+0
+	rel 152+8 t=3 type.noalg.struct { F uintptr; ""..autotmp_18 int; ""..autotmp_19 context.Context }+0
+	rel 160+4 t=9 runtime.newobject+0
+	rel 164+8 t=3 "".sub_process.func2+0
+	rel 192+8 t=3 runtime.writeBarrier+0
+	rel 228+4 t=9 runtime.gcWriteBarrier+0
+	rel 232+4 t=9 runtime.newproc+0
+	rel 252+4 t=9 runtime.chanrecv1+0
+	rel 268+4 t=9 runtime.convT64+0
+	rel 272+8 t=3 type.int+0
+	rel 292+4 t=9 runtime.convT64+0
+	rel 296+8 t=3 type.int+0
+	rel 312+8 t=3 os.Stdout+0
+	rel 324+8 t=3 go.itab.*os.File,io.Writer+0
+	rel 348+8 t=3 go.string."[sub_process:%d]receive message: %d\n"+0
+	rel 356+4 t=9 fmt.Fprintf+0
+	rel 372+4 t=9 time.Sleep+0
+	rel 388+0 t=10 +0
+	rel 400+4 t=9 runtime.selectnbrecv+0
+	rel 408+4 t=9 time.Now+0
+	rel 436+4 t=9 runtime.convT64+0
+	rel 440+8 t=3 type.int+0
+	rel 456+8 t=3 type.time.Time+0
+	rel 468+4 t=9 runtime.convT+0
+	rel 472+8 t=3 type.time.Time+0
+	rel 488+8 t=3 os.Stdout+0
+	rel 500+8 t=3 go.itab.*os.File,io.Writer+0
+	rel 508+8 t=3 go.string."[sub_process:%d]main goroutine notify to current sub process when %v.\n"+0
+	rel 532+4 t=9 fmt.Fprintf+0
+	rel 572+4 t=9 runtime.morestack_noctxt+0
+"".sub_process.func2 STEXT size=128 args=0x0 locals=0x38 funcid=0x15 align=0x0
+	0x0000 00000 (context.go:34)	TEXT	"".sub_process.func2(SB), WRAPPER|NEEDCTXT|ABIInternal, $64-0
+	0x0000 00000 (context.go:34)	MOVD	16(g), R16
+	0x0004 00004 (context.go:34)	PCDATA	$0, $-2
+	0x0004 00004 (context.go:34)	MOVD	RSP, R17
+	0x0008 00008 (context.go:34)	CMP	R16, R17
+	0x000c 00012 (context.go:34)	BLS	76
+	0x0010 00016 (context.go:34)	PCDATA	$0, $-1
+	0x0010 00016 (context.go:34)	MOVD.W	R30, -64(RSP)
+	0x0014 00020 (context.go:34)	MOVD	R29, -8(RSP)
+	0x0018 00024 (context.go:34)	SUB	$8, RSP, R29
+	0x001c 00028 (context.go:34)	MOVD	32(g), R16
+	0x0020 00032 (context.go:34)	CBNZ	R16, 88
+	0x0024 00036 (context.go:34)	NOP
+	0x0024 00036 (context.go:34)	FUNCDATA	ZR, gclocals·33cdeccccebe80329f1fdbee7f5874cb(SB)
+	0x0024 00036 (context.go:34)	FUNCDATA	$1, gclocals·33cdeccccebe80329f1fdbee7f5874cb(SB)
+	0x0024 00036 (context.go:34)	FUNCDATA	$7, "".sub_job.wrapinfo(SB)
+	0x0024 00036 (context.go:34)	MOVD	16(R26), R3
+	0x0028 00040 (context.go:34)	MOVD	24(R26), R4
+	0x002c 00044 (context.go:34)	MOVD	8(R26), R0
+	0x0030 00048 (context.go:34)	MOVD	$go.string."b"(SB), R1
+	0x0038 00056 (context.go:34)	MOVD	$1, R2
+	0x003c 00060 (context.go:34)	PCDATA	$1, ZR
+	0x003c 00060 (context.go:34)	CALL	"".sub_job(SB)
+	0x0040 00064 (context.go:34)	MOVD	-8(RSP), R29
+	0x0044 00068 (context.go:34)	MOVD.P	64(RSP), R30
+	0x0048 00072 (context.go:34)	RET	(R30)
+	0x004c 00076 (context.go:34)	NOP
+	0x004c 00076 (context.go:34)	PCDATA	$1, $-1
+	0x004c 00076 (context.go:34)	PCDATA	$0, $-2
+	0x004c 00076 (context.go:34)	MOVD	R30, R3
+	0x0050 00080 (context.go:34)	CALL	runtime.morestack(SB)
+	0x0054 00084 (context.go:34)	PCDATA	$0, $-1
+	0x0054 00084 (context.go:34)	JMP	0
+	0x0058 00088 (context.go:34)	MOVD	(R16), R17
+	0x005c 00092 (context.go:34)	ADD	$72, RSP, R20
+	0x0060 00096 (context.go:34)	CMP	R17, R20
+	0x0064 00100 (context.go:34)	BNE	36
+	0x0068 00104 (context.go:34)	ADD	$8, RSP, R20
+	0x006c 00108 (context.go:34)	MOVD	R20, (R16)
+	0x0070 00112 (context.go:34)	JMP	36
+	0x0000 90 0b 40 f9 f1 03 00 91 3f 02 10 eb 09 02 00 54  ..@.....?......T
+	0x0010 fe 0f 1c f8 fd 83 1f f8 fd 23 00 d1 90 13 40 f9  .........#....@.
+	0x0020 d0 01 00 b5 43 0b 40 f9 44 0f 40 f9 40 07 40 f9  ....C.@.D.@.@.@.
+	0x0030 01 00 00 90 21 00 00 91 e2 03 40 b2 00 00 00 94  ....!.....@.....
+	0x0040 fd 83 5f f8 fe 07 44 f8 c0 03 5f d6 e3 03 1e aa  .._...D..._.....
+	0x0050 00 00 00 94 eb ff ff 17 11 02 40 f9 f4 23 01 91  ..........@..#..
+	0x0060 9f 02 11 eb 01 fe ff 54 f4 23 00 91 14 02 00 f9  .......T.#......
+	0x0070 ed ff ff 17 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	rel 48+8 t=3 go.string."b"+0
+	rel 60+4 t=9 "".sub_job+0
+	rel 80+4 t=9 runtime.morestack+0
+"".sub_process.func1 STEXT size=128 args=0x0 locals=0x38 funcid=0x15 align=0x0
+	0x0000 00000 (context.go:33)	TEXT	"".sub_process.func1(SB), WRAPPER|NEEDCTXT|ABIInternal, $64-0
+	0x0000 00000 (context.go:33)	MOVD	16(g), R16
+	0x0004 00004 (context.go:33)	PCDATA	$0, $-2
+	0x0004 00004 (context.go:33)	MOVD	RSP, R17
+	0x0008 00008 (context.go:33)	CMP	R16, R17
+	0x000c 00012 (context.go:33)	BLS	76
+	0x0010 00016 (context.go:33)	PCDATA	$0, $-1
+	0x0010 00016 (context.go:33)	MOVD.W	R30, -64(RSP)
+	0x0014 00020 (context.go:33)	MOVD	R29, -8(RSP)
+	0x0018 00024 (context.go:33)	SUB	$8, RSP, R29
+	0x001c 00028 (context.go:33)	MOVD	32(g), R16
+	0x0020 00032 (context.go:33)	CBNZ	R16, 88
+	0x0024 00036 (context.go:33)	NOP
+	0x0024 00036 (context.go:33)	FUNCDATA	ZR, gclocals·33cdeccccebe80329f1fdbee7f5874cb(SB)
+	0x0024 00036 (context.go:33)	FUNCDATA	$1, gclocals·33cdeccccebe80329f1fdbee7f5874cb(SB)
+	0x0024 00036 (context.go:33)	FUNCDATA	$7, "".sub_job.wrapinfo(SB)
+	0x0024 00036 (context.go:33)	MOVD	16(R26), R3
+	0x0028 00040 (context.go:33)	MOVD	24(R26), R4
+	0x002c 00044 (context.go:33)	MOVD	8(R26), R0
+	0x0030 00048 (context.go:33)	MOVD	$go.string."a"(SB), R1
+	0x0038 00056 (context.go:33)	MOVD	$1, R2
+	0x003c 00060 (context.go:33)	PCDATA	$1, ZR
+	0x003c 00060 (context.go:33)	CALL	"".sub_job(SB)
+	0x0040 00064 (context.go:33)	MOVD	-8(RSP), R29
+	0x0044 00068 (context.go:33)	MOVD.P	64(RSP), R30
+	0x0048 00072 (context.go:33)	RET	(R30)
+	0x004c 00076 (context.go:33)	NOP
+	0x004c 00076 (context.go:33)	PCDATA	$1, $-1
+	0x004c 00076 (context.go:33)	PCDATA	$0, $-2
+	0x004c 00076 (context.go:33)	MOVD	R30, R3
+	0x0050 00080 (context.go:33)	CALL	runtime.morestack(SB)
+	0x0054 00084 (context.go:33)	PCDATA	$0, $-1
+	0x0054 00084 (context.go:33)	JMP	0
+	0x0058 00088 (context.go:33)	MOVD	(R16), R17
+	0x005c 00092 (context.go:33)	ADD	$72, RSP, R20
+	0x0060 00096 (context.go:33)	CMP	R17, R20
+	0x0064 00100 (context.go:33)	BNE	36
+	0x0068 00104 (context.go:33)	ADD	$8, RSP, R20
+	0x006c 00108 (context.go:33)	MOVD	R20, (R16)
+	0x0070 00112 (context.go:33)	JMP	36
+	0x0000 90 0b 40 f9 f1 03 00 91 3f 02 10 eb 09 02 00 54  ..@.....?......T
+	0x0010 fe 0f 1c f8 fd 83 1f f8 fd 23 00 d1 90 13 40 f9  .........#....@.
+	0x0020 d0 01 00 b5 43 0b 40 f9 44 0f 40 f9 40 07 40 f9  ....C.@.D.@.@.@.
+	0x0030 01 00 00 90 21 00 00 91 e2 03 40 b2 00 00 00 94  ....!.....@.....
+	0x0040 fd 83 5f f8 fe 07 44 f8 c0 03 5f d6 e3 03 1e aa  .._...D..._.....
+	0x0050 00 00 00 94 eb ff ff 17 11 02 40 f9 f4 23 01 91  ..........@..#..
+	0x0060 9f 02 11 eb 01 fe ff 54 f4 23 00 91 14 02 00 f9  .......T.#......
+	0x0070 ed ff ff 17 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	rel 48+8 t=3 go.string."a"+0
+	rel 60+4 t=9 "".sub_job+0
+	rel 80+4 t=9 runtime.morestack+0
+"".sub_job STEXT size=384 args=0x28 locals=0x88 funcid=0x0 align=0x0
+	0x0000 00000 (context.go:48)	TEXT	"".sub_job(SB), ABIInternal, $144-40
+	0x0000 00000 (context.go:48)	MOVD	16(g), R16
+	0x0004 00004 (context.go:48)	PCDATA	$0, $-2
+	0x0004 00004 (context.go:48)	SUB	$16, RSP, R17
+	0x0008 00008 (context.go:48)	CMP	R16, R17
+	0x000c 00012 (context.go:48)	BLS	328
+	0x0010 00016 (context.go:48)	PCDATA	$0, $-1
+	0x0010 00016 (context.go:48)	MOVD.W	R30, -144(RSP)
+	0x0014 00020 (context.go:48)	MOVD	R29, -8(RSP)
+	0x0018 00024 (context.go:48)	SUB	$8, RSP, R29
+	0x001c 00028 (context.go:48)	FUNCDATA	ZR, gclocals·69200cbd9e426760e8018fb36e22123d(SB)
+	0x001c 00028 (context.go:48)	FUNCDATA	$1, gclocals·21f924b7fd155fd54dab64b6f0a6620f(SB)
+	0x001c 00028 (context.go:48)	FUNCDATA	$2, "".sub_job.stkobj(SB)
+	0x001c 00028 (context.go:48)	FUNCDATA	$5, "".sub_job.arginfo1(SB)
+	0x001c 00028 (context.go:48)	FUNCDATA	$6, "".sub_job.argliveinfo(SB)
+	0x001c 00028 (context.go:48)	PCDATA	$3, $1
+	0x001c 00028 (context.go:48)	MOVD	R2, "".name+16(FP)
+	0x0020 00032 (context.go:52)	MOVD	R3, "".ctx+24(FP)
+	0x0024 00036 (context.go:48)	MOVD	R0, ""..autotmp_37-72(SP)
+	0x0028 00040 (context.go:52)	MOVD	R4, "".ctx+32(FP)
+	0x002c 00044 (context.go:48)	MOVD	R1, "".name+8(FP)
+	0x0030 00048 (context.go:48)	PCDATA	$3, $2
+	0x0030 00048 (context.go:49)	JMP	164
+	0x0034 00052 (context.go:56)	STP	(ZR, ZR), ""..autotmp_24-64(SP)
+	0x0038 00056 (context.go:56)	STP	(ZR, ZR), ""..autotmp_24-48(SP)
+	0x003c 00060 (context.go:56)	MOVD	""..autotmp_37-72(SP), R0
+	0x0040 00064 (context.go:56)	PCDATA	$1, $1
+	0x0040 00064 (context.go:56)	CALL	runtime.convT64(SB)
+	0x0044 00068 (context.go:56)	MOVD	$type.int(SB), R1
+	0x004c 00076 (context.go:56)	MOVD	R1, ""..autotmp_24-64(SP)
+	0x0050 00080 (context.go:56)	MOVD	R0, ""..autotmp_24-56(SP)
+	0x0054 00084 (context.go:56)	MOVD	"".name+8(FP), R0
+	0x0058 00088 (context.go:56)	MOVD	"".name+16(FP), R1
+	0x005c 00092 (context.go:56)	CALL	runtime.convTstring(SB)
+	0x0060 00096 (context.go:56)	MOVD	$type.string(SB), R1
+	0x0068 00104 (context.go:56)	MOVD	R1, ""..autotmp_24-48(SP)
+	0x006c 00108 (context.go:56)	MOVD	R0, ""..autotmp_24-40(SP)
+	0x0070 00112 (<unknown line number>)	NOP
+	0x0070 00112 (<unknown line number>)	PCDATA	$0, $-3
+	0x0070 00112 ($GOROOT/src/fmt/print.go:213)	MOVD	os.Stdout(SB), R2
+	0x007c 00124 ($GOROOT/src/fmt/print.go:213)	PCDATA	$0, $-1
+	0x007c 00124 ($GOROOT/src/fmt/print.go:213)	MOVD	$go.itab.*os.File,io.Writer(SB), R0
+	0x0084 00132 ($GOROOT/src/fmt/print.go:213)	MOVD	$35, R3
+	0x0088 00136 ($GOROOT/src/fmt/print.go:213)	MOVD	$""..autotmp_24-64(SP), R4
+	0x008c 00140 ($GOROOT/src/fmt/print.go:213)	MOVD	$2, R5
+	0x0090 00144 ($GOROOT/src/fmt/print.go:213)	MOVD	R5, R6
+	0x0094 00148 ($GOROOT/src/fmt/print.go:213)	MOVD	R2, R1
+	0x0098 00152 ($GOROOT/src/fmt/print.go:213)	MOVD	$go.string."[sub_process:%d->%s] under doing. \n"(SB), R2
+	0x00a0 00160 ($GOROOT/src/fmt/print.go:213)	PCDATA	$1, ZR
+	0x00a0 00160 ($GOROOT/src/fmt/print.go:213)	CALL	fmt.Fprintf(SB)
+	0x00a4 00164 (context.go:50)	MOVD	$1000000000, R0
+	0x00ac 00172 (context.go:50)	CALL	time.Sleep(SB)
+	0x00b0 00176 (context.go:52)	MOVD	"".ctx+24(FP), R1
+	0x00b4 00180 (context.go:52)	MOVD	32(R1), R2
+	0x00b8 00184 (context.go:52)	MOVD	"".ctx+32(FP), R0
+	0x00bc 00188 (context.go:52)	CALL	(R2)
+	0x00c0 00192 (context.go:52)	MOVD	R0, R1
+	0x00c4 00196 (context.go:52)	MOVD	ZR, R0
+	0x00c8 00200 (context.go:52)	CALL	runtime.selectnbrecv(SB)
+	0x00cc 00204 (context.go:52)	CBZ	R0, 52
+	0x00d0 00208 (context.go:53)	STP	(ZR, ZR), ""..autotmp_20-32(SP)
+	0x00d4 00212 (context.go:53)	STP	(ZR, ZR), ""..autotmp_20-16(SP)
+	0x00d8 00216 (context.go:53)	MOVD	""..autotmp_37-72(SP), R0
+	0x00dc 00220 (context.go:53)	PCDATA	$1, $2
+	0x00dc 00220 (context.go:53)	CALL	runtime.convT64(SB)
+	0x00e0 00224 (context.go:53)	MOVD	$type.int(SB), R1
+	0x00e8 00232 (context.go:53)	MOVD	R1, ""..autotmp_20-32(SP)
+	0x00ec 00236 (context.go:53)	MOVD	R0, ""..autotmp_20-24(SP)
+	0x00f0 00240 (context.go:53)	MOVD	"".name+8(FP), R0
+	0x00f4 00244 (context.go:53)	MOVD	"".name+16(FP), R1
+	0x00f8 00248 (context.go:53)	PCDATA	$1, $3
+	0x00f8 00248 (context.go:53)	CALL	runtime.convTstring(SB)
+	0x00fc 00252 (context.go:53)	MOVD	$type.string(SB), R1
+	0x0104 00260 (context.go:53)	MOVD	R1, ""..autotmp_20-16(SP)
+	0x0108 00264 (context.go:53)	MOVD	R0, ""..autotmp_20-8(SP)
+	0x010c 00268 (<unknown line number>)	NOP
+	0x010c 00268 (<unknown line number>)	PCDATA	$0, $-4
+	0x010c 00268 ($GOROOT/src/fmt/print.go:213)	MOVD	os.Stdout(SB), R1
+	0x0118 00280 ($GOROOT/src/fmt/print.go:213)	PCDATA	$0, $-1
+	0x0118 00280 ($GOROOT/src/fmt/print.go:213)	MOVD	$go.itab.*os.File,io.Writer(SB), R0
+	0x0120 00288 ($GOROOT/src/fmt/print.go:213)	MOVD	$go.string."[sub_process:%d->%s] has been done. \n"(SB), R2
+	0x0128 00296 ($GOROOT/src/fmt/print.go:213)	MOVD	$37, R3
+	0x012c 00300 ($GOROOT/src/fmt/print.go:213)	MOVD	$""..autotmp_20-32(SP), R4
+	0x0130 00304 ($GOROOT/src/fmt/print.go:213)	MOVD	$2, R5
+	0x0134 00308 ($GOROOT/src/fmt/print.go:213)	MOVD	R5, R6
+	0x0138 00312 ($GOROOT/src/fmt/print.go:213)	PCDATA	$1, $4
+	0x0138 00312 ($GOROOT/src/fmt/print.go:213)	CALL	fmt.Fprintf(SB)
+	0x013c 00316 (context.go:54)	MOVD	-8(RSP), R29
+	0x0140 00320 (context.go:54)	MOVD.P	144(RSP), R30
+	0x0144 00324 (context.go:54)	RET	(R30)
+	0x0148 00328 (context.go:54)	NOP
+	0x0148 00328 (context.go:48)	PCDATA	$1, $-1
+	0x0148 00328 (context.go:48)	PCDATA	$0, $-2
+	0x0148 00328 (context.go:48)	MOVD	R0, 8(RSP)
+	0x014c 00332 (context.go:48)	MOVD	R1, 16(RSP)
+	0x0150 00336 (context.go:48)	MOVD	R2, 24(RSP)
+	0x0154 00340 (context.go:48)	MOVD	R3, 32(RSP)
+	0x0158 00344 (context.go:48)	MOVD	R4, 40(RSP)
+	0x015c 00348 (context.go:48)	MOVD	R30, R3
+	0x0160 00352 (context.go:48)	CALL	runtime.morestack_noctxt(SB)
+	0x0164 00356 (context.go:48)	MOVD	8(RSP), R0
+	0x0168 00360 (context.go:48)	MOVD	16(RSP), R1
+	0x016c 00364 (context.go:48)	MOVD	24(RSP), R2
+	0x0170 00368 (context.go:48)	MOVD	32(RSP), R3
+	0x0174 00372 (context.go:48)	MOVD	40(RSP), R4
+	0x0178 00376 (context.go:48)	PCDATA	$0, $-1
+	0x0178 00376 (context.go:48)	JMP	0
+	0x0000 90 0b 40 f9 f1 43 00 d1 3f 02 10 eb e9 09 00 54  ..@..C..?......T
+	0x0010 fe 0f 17 f8 fd 83 1f f8 fd 23 00 d1 e2 57 00 f9  .........#...W..
+	0x0020 e3 5b 00 f9 e0 23 00 f9 e4 5f 00 f9 e1 53 00 f9  .[...#..._...S..
+	0x0030 1d 00 00 14 ff ff 04 a9 ff ff 05 a9 e0 23 40 f9  .............#@.
+	0x0040 00 00 00 94 01 00 00 90 21 00 00 91 e1 27 00 f9  ........!....'..
+	0x0050 e0 2b 00 f9 e0 53 40 f9 e1 57 40 f9 00 00 00 94  .+...S@..W@.....
+	0x0060 01 00 00 90 21 00 00 91 e1 2f 00 f9 e0 33 00 f9  ....!..../...3..
+	0x0070 1b 00 00 90 7b 03 00 91 62 03 40 f9 00 00 00 90  ....{...b.@.....
+	0x0080 00 00 00 91 63 04 80 d2 e4 23 01 91 e5 03 7f b2  ....c....#......
+	0x0090 e6 03 05 aa e1 03 02 aa 02 00 00 90 42 00 00 91  ............B...
+	0x00a0 00 00 00 94 00 40 99 d2 40 73 a7 f2 00 00 00 94  .....@..@s......
+	0x00b0 e1 5b 40 f9 22 10 40 f9 e0 5f 40 f9 40 00 3f d6  .[@.".@.._@.@.?.
+	0x00c0 e1 03 00 aa 00 00 80 d2 00 00 00 94 40 fb ff b4  ............@...
+	0x00d0 ff ff 06 a9 ff ff 07 a9 e0 23 40 f9 00 00 00 94  .........#@.....
+	0x00e0 01 00 00 90 21 00 00 91 e1 37 00 f9 e0 3b 00 f9  ....!....7...;..
+	0x00f0 e0 53 40 f9 e1 57 40 f9 00 00 00 94 01 00 00 90  .S@..W@.........
+	0x0100 21 00 00 91 e1 3f 00 f9 e0 43 00 f9 1b 00 00 90  !....?...C......
+	0x0110 7b 03 00 91 61 03 40 f9 00 00 00 90 00 00 00 91  {...a.@.........
+	0x0120 02 00 00 90 42 00 00 91 a3 04 80 d2 e4 a3 01 91  ....B...........
+	0x0130 e5 03 7f b2 e6 03 05 aa 00 00 00 94 fd 83 5f f8  .............._.
+	0x0140 fe 07 49 f8 c0 03 5f d6 e0 07 00 f9 e1 0b 00 f9  ..I..._.........
+	0x0150 e2 0f 00 f9 e3 13 00 f9 e4 17 00 f9 e3 03 1e aa  ................
+	0x0160 00 00 00 94 e0 07 40 f9 e1 0b 40 f9 e2 0f 40 f9  ......@...@...@.
+	0x0170 e3 13 40 f9 e4 17 40 f9 a2 ff ff 17 00 00 00 00  ..@...@.........
+	rel 0+0 t=23 type.*os.File+0
+	rel 0+0 t=23 type.int+0
+	rel 0+0 t=23 type.string+0
+	rel 0+0 t=23 type.*os.File+0
+	rel 0+0 t=23 type.int+0
+	rel 0+0 t=23 type.string+0
+	rel 0+0 t=24 type.context.Context+104
+	rel 64+4 t=9 runtime.convT64+0
+	rel 68+8 t=3 type.int+0
+	rel 92+4 t=9 runtime.convTstring+0
+	rel 96+8 t=3 type.string+0
+	rel 112+8 t=3 os.Stdout+0
+	rel 124+8 t=3 go.itab.*os.File,io.Writer+0
+	rel 152+8 t=3 go.string."[sub_process:%d->%s] under doing. \n"+0
+	rel 160+4 t=9 fmt.Fprintf+0
+	rel 172+4 t=9 time.Sleep+0
+	rel 188+0 t=10 +0
+	rel 200+4 t=9 runtime.selectnbrecv+0
+	rel 220+4 t=9 runtime.convT64+0
+	rel 224+8 t=3 type.int+0
+	rel 248+4 t=9 runtime.convTstring+0
+	rel 252+8 t=3 type.string+0
+	rel 268+8 t=3 os.Stdout+0
+	rel 280+8 t=3 go.itab.*os.File,io.Writer+0
+	rel 288+8 t=3 go.string."[sub_process:%d->%s] has been done. \n"+0
+	rel 312+4 t=9 fmt.Fprintf+0
+	rel 352+4 t=9 runtime.morestack_noctxt+0
+go.cuinfo.packagename. SDWARFCUINFO dupok size=0
+	0x0000 6d 61 69 6e                                      main
+go.info.fmt.Printf$abstract SDWARFABSFCN dupok size=54
+	0x0000 05 66 6d 74 2e 50 72 69 6e 74 66 00 01 01 13 66  .fmt.Printf....f
+	0x0010 6f 72 6d 61 74 00 00 00 00 00 00 13 61 00 00 00  ormat.......a...
+	0x0020 00 00 00 13 6e 00 01 00 00 00 00 13 65 72 72 00  ....n.......err.
+	0x0030 01 00 00 00 00 00                                ......
+	rel 0+0 t=22 type.[]interface {}+0
+	rel 0+0 t=22 type.error+0
+	rel 0+0 t=22 type.int+0
+	rel 0+0 t=22 type.string+0
+	rel 23+4 t=31 go.info.string+0
+	rel 31+4 t=31 go.info.[]interface {}+0
+	rel 39+4 t=31 go.info.int+0
+	rel 49+4 t=31 go.info.error+0
+go.info.context.Background$abstract SDWARFABSFCN dupok size=23
+	0x0000 05 63 6f 6e 74 65 78 74 2e 42 61 63 6b 67 72 6f  .context.Backgro
+	0x0010 75 6e 64 00 01 01 00                             und....
+	rel 0+0 t=22 type.context.Context+0
+go.info.fmt.Println$abstract SDWARFABSFCN dupok size=42
+	0x0000 05 66 6d 74 2e 50 72 69 6e 74 6c 6e 00 01 01 13  .fmt.Println....
+	0x0010 61 00 00 00 00 00 00 13 6e 00 01 00 00 00 00 13  a.......n.......
+	0x0020 65 72 72 00 01 00 00 00 00 00                    err.......
+	rel 0+0 t=22 type.[]interface {}+0
+	rel 0+0 t=22 type.error+0
+	rel 0+0 t=22 type.int+0
+	rel 19+4 t=31 go.info.[]interface {}+0
+	rel 27+4 t=31 go.info.int+0
+	rel 37+4 t=31 go.info.error+0
+""..inittask SNOPTRDATA size=48
+	0x0000 00 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00  ................
+	0x0010 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	rel 24+8 t=1 context..inittask+0
+	rel 32+8 t=1 fmt..inittask+0
+	rel 40+8 t=1 time..inittask+0
+go.string."current process exit." SRODATA dupok size=21
+	0x0000 63 75 72 72 65 6e 74 20 70 72 6f 63 65 73 73 20  current process 
+	0x0010 65 78 69 74 2e                                   exit.
+go.itab.*context.emptyCtx,context.Context SRODATA dupok size=56
+	0x0000 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0010 1e 38 3d 9f 00 00 00 00 00 00 00 00 00 00 00 00  .8=.............
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00                          ........
+	rel 0+8 t=1 type.context.Context+0
+	rel 8+8 t=1 type.*context.emptyCtx+0
+	rel 24+8 t=-32767 context.(*emptyCtx).Deadline+0
+	rel 32+8 t=-32767 context.(*emptyCtx).Done+0
+	rel 40+8 t=-32767 context.(*emptyCtx).Err+0
+	rel 48+8 t=-32767 context.(*emptyCtx).Value+0
+go.itab.*os.File,io.Writer SRODATA dupok size=32
+	0x0000 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0010 44 b5 f3 33 00 00 00 00 00 00 00 00 00 00 00 00  D..3............
+	rel 0+8 t=1 type.io.Writer+0
+	rel 8+8 t=1 type.*os.File+0
+	rel 24+8 t=-32767 os.(*File).Write+0
+go.string."[sub_process:%d]main goroutine notify to current sub process when %v.\n" SRODATA dupok size=70
+	0x0000 5b 73 75 62 5f 70 72 6f 63 65 73 73 3a 25 64 5d  [sub_process:%d]
+	0x0010 6d 61 69 6e 20 67 6f 72 6f 75 74 69 6e 65 20 6e  main goroutine n
+	0x0020 6f 74 69 66 79 20 74 6f 20 63 75 72 72 65 6e 74  otify to current
+	0x0030 20 73 75 62 20 70 72 6f 63 65 73 73 20 77 68 65   sub process whe
+	0x0040 6e 20 25 76 2e 0a                                n %v..
+go.string."[sub_process:%d]receive message: %d\n" SRODATA dupok size=36
+	0x0000 5b 73 75 62 5f 70 72 6f 63 65 73 73 3a 25 64 5d  [sub_process:%d]
+	0x0010 72 65 63 65 69 76 65 20 6d 65 73 73 61 67 65 3a  receive message:
+	0x0020 20 25 64 0a                                       %d.
+go.string."b" SRODATA dupok size=1
+	0x0000 62                                               b
+go.string."a" SRODATA dupok size=1
+	0x0000 61                                               a
+go.string."[sub_process:%d->%s] has been done. \n" SRODATA dupok size=37
+	0x0000 5b 73 75 62 5f 70 72 6f 63 65 73 73 3a 25 64 2d  [sub_process:%d-
+	0x0010 3e 25 73 5d 20 68 61 73 20 62 65 65 6e 20 64 6f  >%s] has been do
+	0x0020 6e 65 2e 20 0a                                   ne. .
+go.string."[sub_process:%d->%s] under doing. \n" SRODATA dupok size=35
+	0x0000 5b 73 75 62 5f 70 72 6f 63 65 73 73 3a 25 64 2d  [sub_process:%d-
+	0x0010 3e 25 73 5d 20 75 6e 64 65 72 20 64 6f 69 6e 67  >%s] under doing
+	0x0020 2e 20 0a                                         . .
+""..stmp_0 SRODATA static size=16
+	0x0000 00 00 00 00 00 00 00 00 15 00 00 00 00 00 00 00  ................
+	rel 0+8 t=1 go.string."current process exit."+0
+runtime.nilinterequal·f SRODATA dupok size=8
+	0x0000 00 00 00 00 00 00 00 00                          ........
+	rel 0+8 t=1 runtime.nilinterequal+0
+runtime.memequal64·f SRODATA dupok size=8
+	0x0000 00 00 00 00 00 00 00 00                          ........
+	rel 0+8 t=1 runtime.memequal64+0
+runtime.gcbits.01 SRODATA dupok size=1
+	0x0000 01                                               .
+type..namedata.*interface {}- SRODATA dupok size=15
+	0x0000 00 0d 2a 69 6e 74 65 72 66 61 63 65 20 7b 7d     ..*interface {}
+type.*interface {} SRODATA dupok size=56
+	0x0000 08 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00  ................
+	0x0010 4f 0f 96 9d 08 08 08 36 00 00 00 00 00 00 00 00  O......6........
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00                          ........
+	rel 24+8 t=1 runtime.memequal64·f+0
+	rel 32+8 t=1 runtime.gcbits.01+0
+	rel 40+4 t=5 type..namedata.*interface {}-+0
+	rel 48+8 t=1 type.interface {}+0
+runtime.gcbits.02 SRODATA dupok size=1
+	0x0000 02                                               .
+type.interface {} SRODATA dupok size=80
+	0x0000 10 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00  ................
+	0x0010 e7 57 a0 18 02 08 08 14 00 00 00 00 00 00 00 00  .W..............
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0040 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	rel 24+8 t=1 runtime.nilinterequal·f+0
+	rel 32+8 t=1 runtime.gcbits.02+0
+	rel 40+4 t=5 type..namedata.*interface {}-+0
+	rel 44+4 t=-32763 type.*interface {}+0
+	rel 56+8 t=1 type.interface {}+80
+type..namedata.*[]interface {}- SRODATA dupok size=17
+	0x0000 00 0f 2a 5b 5d 69 6e 74 65 72 66 61 63 65 20 7b  ..*[]interface {
+	0x0010 7d                                               }
+type.*[]interface {} SRODATA dupok size=56
+	0x0000 08 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00  ................
+	0x0010 f3 04 9a e7 08 08 08 36 00 00 00 00 00 00 00 00  .......6........
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00                          ........
+	rel 24+8 t=1 runtime.memequal64·f+0
+	rel 32+8 t=1 runtime.gcbits.01+0
+	rel 40+4 t=5 type..namedata.*[]interface {}-+0
+	rel 48+8 t=1 type.[]interface {}+0
+type.[]interface {} SRODATA dupok size=56
+	0x0000 18 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00  ................
+	0x0010 70 93 ea 2f 02 08 08 17 00 00 00 00 00 00 00 00  p../............
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00                          ........
+	rel 32+8 t=1 runtime.gcbits.01+0
+	rel 40+4 t=5 type..namedata.*[]interface {}-+0
+	rel 44+4 t=-32763 type.*[]interface {}+0
+	rel 48+8 t=1 type.interface {}+0
+type..namedata.*chan int- SRODATA dupok size=11
+	0x0000 00 09 2a 63 68 61 6e 20 69 6e 74                 ..*chan int
+type.*chan int SRODATA dupok size=56
+	0x0000 08 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00  ................
+	0x0010 ed 7b ed 3b 08 08 08 36 00 00 00 00 00 00 00 00  .{.;...6........
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00                          ........
+	rel 24+8 t=1 runtime.memequal64·f+0
+	rel 32+8 t=1 runtime.gcbits.01+0
+	rel 40+4 t=5 type..namedata.*chan int-+0
+	rel 48+8 t=1 type.chan int+0
+type.chan int SRODATA dupok size=64
+	0x0000 08 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00  ................
+	0x0010 91 55 cb 71 0a 08 08 32 00 00 00 00 00 00 00 00  .U.q...2........
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00  ................
+	rel 24+8 t=1 runtime.memequal64·f+0
+	rel 32+8 t=1 runtime.gcbits.01+0
+	rel 40+4 t=5 type..namedata.*chan int-+0
+	rel 44+4 t=-32763 type.*chan int+0
+	rel 48+8 t=1 type.int+0
+type..namedata.*<-chan int- SRODATA dupok size=13
+	0x0000 00 0b 2a 3c 2d 63 68 61 6e 20 69 6e 74           ..*<-chan int
+type.*<-chan int SRODATA dupok size=56
+	0x0000 08 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00  ................
+	0x0010 ff 5e cb 9b 08 08 08 36 00 00 00 00 00 00 00 00  .^.....6........
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00                          ........
+	rel 24+8 t=1 runtime.memequal64·f+0
+	rel 32+8 t=1 runtime.gcbits.01+0
+	rel 40+4 t=5 type..namedata.*<-chan int-+0
+	rel 48+8 t=1 type.<-chan int+0
+type.<-chan int SRODATA dupok size=64
+	0x0000 08 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00  ................
+	0x0010 23 22 a1 c0 0a 08 08 32 00 00 00 00 00 00 00 00  #".....2........
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00  ................
+	rel 24+8 t=1 runtime.memequal64·f+0
+	rel 32+8 t=1 runtime.gcbits.01+0
+	rel 40+4 t=5 type..namedata.*<-chan int-+0
+	rel 44+4 t=-32763 type.*<-chan int+0
+	rel 48+8 t=1 type.int+0
+type..namedata.*struct { F uintptr; .autotmp_12 int; .autotmp_13 context.Context; .autotmp_14 <-chan int }- SRODATA dupok size=93
+	0x0000 00 5b 2a 73 74 72 75 63 74 20 7b 20 46 20 75 69  .[*struct { F ui
+	0x0010 6e 74 70 74 72 3b 20 2e 61 75 74 6f 74 6d 70 5f  ntptr; .autotmp_
+	0x0020 31 32 20 69 6e 74 3b 20 2e 61 75 74 6f 74 6d 70  12 int; .autotmp
+	0x0030 5f 31 33 20 63 6f 6e 74 65 78 74 2e 43 6f 6e 74  _13 context.Cont
+	0x0040 65 78 74 3b 20 2e 61 75 74 6f 74 6d 70 5f 31 34  ext; .autotmp_14
+	0x0050 20 3c 2d 63 68 61 6e 20 69 6e 74 20 7d            <-chan int }
+type.*struct { F uintptr; ""..autotmp_12 int; ""..autotmp_13 context.Context; ""..autotmp_14 <-chan int } SRODATA dupok size=56
+	0x0000 08 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00  ................
+	0x0010 2a 70 22 b3 08 08 08 36 00 00 00 00 00 00 00 00  *p"....6........
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00                          ........
+	rel 24+8 t=1 runtime.memequal64·f+0
+	rel 32+8 t=1 runtime.gcbits.01+0
+	rel 40+4 t=5 type..namedata.*struct { F uintptr; .autotmp_12 int; .autotmp_13 context.Context; .autotmp_14 <-chan int }-+0
+	rel 48+8 t=1 type.noalg.struct { F uintptr; ""..autotmp_12 int; ""..autotmp_13 context.Context; ""..autotmp_14 <-chan int }+0
+runtime.gcbits.18 SRODATA dupok size=1
+	0x0000 18                                               .
+type..namedata..F- SRODATA dupok size=4
+	0x0000 00 02 2e 46                                      ...F
+type..namedata..autotmp_12- SRODATA dupok size=13
+	0x0000 00 0b 2e 61 75 74 6f 74 6d 70 5f 31 32           ...autotmp_12
+type..namedata..autotmp_13- SRODATA dupok size=13
+	0x0000 00 0b 2e 61 75 74 6f 74 6d 70 5f 31 33           ...autotmp_13
+type..namedata..autotmp_14- SRODATA dupok size=13
+	0x0000 00 0b 2e 61 75 74 6f 74 6d 70 5f 31 34           ...autotmp_14
+type.noalg.struct { F uintptr; ""..autotmp_12 int; ""..autotmp_13 context.Context; ""..autotmp_14 <-chan int } SRODATA dupok size=176
+	0x0000 28 00 00 00 00 00 00 00 28 00 00 00 00 00 00 00  (.......(.......
+	0x0010 4e c6 a5 13 02 08 08 19 00 00 00 00 00 00 00 00  N...............
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0040 04 00 00 00 00 00 00 00 04 00 00 00 00 00 00 00  ................
+	0x0050 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0060 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0070 00 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00  ................
+	0x0080 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0090 20 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ...............
+	0x00a0 00 00 00 00 00 00 00 00 40 00 00 00 00 00 00 00  ........@.......
+	rel 32+8 t=1 runtime.gcbits.18+0
+	rel 40+4 t=5 type..namedata.*struct { F uintptr; .autotmp_12 int; .autotmp_13 context.Context; .autotmp_14 <-chan int }-+0
+	rel 44+4 t=-32763 type.*struct { F uintptr; ""..autotmp_12 int; ""..autotmp_13 context.Context; ""..autotmp_14 <-chan int }+0
+	rel 48+8 t=1 type..importpath."".+0
+	rel 56+8 t=1 type.noalg.struct { F uintptr; ""..autotmp_12 int; ""..autotmp_13 context.Context; ""..autotmp_14 <-chan int }+80
+	rel 80+8 t=1 type..namedata..F-+0
+	rel 88+8 t=1 type.uintptr+0
+	rel 104+8 t=1 type..namedata..autotmp_12-+0
+	rel 112+8 t=1 type.int+0
+	rel 128+8 t=1 type..namedata..autotmp_13-+0
+	rel 136+8 t=1 type.context.Context+0
+	rel 152+8 t=1 type..namedata..autotmp_14-+0
+	rel 160+8 t=1 type.<-chan int+0
+type..namedata.*struct { F uintptr; .autotmp_16 int; .autotmp_17 context.Context }- SRODATA dupok size=69
+	0x0000 00 43 2a 73 74 72 75 63 74 20 7b 20 46 20 75 69  .C*struct { F ui
+	0x0010 6e 74 70 74 72 3b 20 2e 61 75 74 6f 74 6d 70 5f  ntptr; .autotmp_
+	0x0020 31 36 20 69 6e 74 3b 20 2e 61 75 74 6f 74 6d 70  16 int; .autotmp
+	0x0030 5f 31 37 20 63 6f 6e 74 65 78 74 2e 43 6f 6e 74  _17 context.Cont
+	0x0040 65 78 74 20 7d                                   ext }
+type.*struct { F uintptr; ""..autotmp_16 int; ""..autotmp_17 context.Context } SRODATA dupok size=56
+	0x0000 08 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00  ................
+	0x0010 af 17 e8 bd 08 08 08 36 00 00 00 00 00 00 00 00  .......6........
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00                          ........
+	rel 24+8 t=1 runtime.memequal64·f+0
+	rel 32+8 t=1 runtime.gcbits.01+0
+	rel 40+4 t=5 type..namedata.*struct { F uintptr; .autotmp_16 int; .autotmp_17 context.Context }-+0
+	rel 48+8 t=1 type.noalg.struct { F uintptr; ""..autotmp_16 int; ""..autotmp_17 context.Context }+0
+runtime.gcbits.08 SRODATA dupok size=1
+	0x0000 08                                               .
+type..namedata..autotmp_16- SRODATA dupok size=13
+	0x0000 00 0b 2e 61 75 74 6f 74 6d 70 5f 31 36           ...autotmp_16
+type..namedata..autotmp_17- SRODATA dupok size=13
+	0x0000 00 0b 2e 61 75 74 6f 74 6d 70 5f 31 37           ...autotmp_17
+type.noalg.struct { F uintptr; ""..autotmp_16 int; ""..autotmp_17 context.Context } SRODATA dupok size=152
+	0x0000 20 00 00 00 00 00 00 00 20 00 00 00 00 00 00 00   ....... .......
+	0x0010 1d ff fe 19 02 08 08 19 00 00 00 00 00 00 00 00  ................
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0040 03 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00  ................
+	0x0050 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0060 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0070 00 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00  ................
+	0x0080 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0090 20 00 00 00 00 00 00 00                           .......
+	rel 32+8 t=1 runtime.gcbits.08+0
+	rel 40+4 t=5 type..namedata.*struct { F uintptr; .autotmp_16 int; .autotmp_17 context.Context }-+0
+	rel 44+4 t=-32763 type.*struct { F uintptr; ""..autotmp_16 int; ""..autotmp_17 context.Context }+0
+	rel 48+8 t=1 type..importpath."".+0
+	rel 56+8 t=1 type.noalg.struct { F uintptr; ""..autotmp_16 int; ""..autotmp_17 context.Context }+80
+	rel 80+8 t=1 type..namedata..F-+0
+	rel 88+8 t=1 type.uintptr+0
+	rel 104+8 t=1 type..namedata..autotmp_16-+0
+	rel 112+8 t=1 type.int+0
+	rel 128+8 t=1 type..namedata..autotmp_17-+0
+	rel 136+8 t=1 type.context.Context+0
+type..namedata.*struct { F uintptr; .autotmp_18 int; .autotmp_19 context.Context }- SRODATA dupok size=69
+	0x0000 00 43 2a 73 74 72 75 63 74 20 7b 20 46 20 75 69  .C*struct { F ui
+	0x0010 6e 74 70 74 72 3b 20 2e 61 75 74 6f 74 6d 70 5f  ntptr; .autotmp_
+	0x0020 31 38 20 69 6e 74 3b 20 2e 61 75 74 6f 74 6d 70  18 int; .autotmp
+	0x0030 5f 31 39 20 63 6f 6e 74 65 78 74 2e 43 6f 6e 74  _19 context.Cont
+	0x0040 65 78 74 20 7d                                   ext }
+type.*struct { F uintptr; ""..autotmp_18 int; ""..autotmp_19 context.Context } SRODATA dupok size=56
+	0x0000 08 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00  ................
+	0x0010 9a 54 10 01 08 08 08 36 00 00 00 00 00 00 00 00  .T.....6........
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00                          ........
+	rel 24+8 t=1 runtime.memequal64·f+0
+	rel 32+8 t=1 runtime.gcbits.01+0
+	rel 40+4 t=5 type..namedata.*struct { F uintptr; .autotmp_18 int; .autotmp_19 context.Context }-+0
+	rel 48+8 t=1 type.noalg.struct { F uintptr; ""..autotmp_18 int; ""..autotmp_19 context.Context }+0
+type..namedata..autotmp_18- SRODATA dupok size=13
+	0x0000 00 0b 2e 61 75 74 6f 74 6d 70 5f 31 38           ...autotmp_18
+type..namedata..autotmp_19- SRODATA dupok size=13
+	0x0000 00 0b 2e 61 75 74 6f 74 6d 70 5f 31 39           ...autotmp_19
+type.noalg.struct { F uintptr; ""..autotmp_18 int; ""..autotmp_19 context.Context } SRODATA dupok size=152
+	0x0000 20 00 00 00 00 00 00 00 20 00 00 00 00 00 00 00   ....... .......
+	0x0010 fc 29 35 d2 02 08 08 19 00 00 00 00 00 00 00 00  .)5.............
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0040 03 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00  ................
+	0x0050 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0060 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0070 00 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00  ................
+	0x0080 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0090 20 00 00 00 00 00 00 00                           .......
+	rel 32+8 t=1 runtime.gcbits.08+0
+	rel 40+4 t=5 type..namedata.*struct { F uintptr; .autotmp_18 int; .autotmp_19 context.Context }-+0
+	rel 44+4 t=-32763 type.*struct { F uintptr; ""..autotmp_18 int; ""..autotmp_19 context.Context }+0
+	rel 48+8 t=1 type..importpath."".+0
+	rel 56+8 t=1 type.noalg.struct { F uintptr; ""..autotmp_18 int; ""..autotmp_19 context.Context }+80
+	rel 80+8 t=1 type..namedata..F-+0
+	rel 88+8 t=1 type.uintptr+0
+	rel 104+8 t=1 type..namedata..autotmp_18-+0
+	rel 112+8 t=1 type.int+0
+	rel 128+8 t=1 type..namedata..autotmp_19-+0
+	rel 136+8 t=1 type.context.Context+0
+runtime.gcbits.0a SRODATA dupok size=1
+	0x0000 0a                                               .
+runtime.gcbits.04 SRODATA dupok size=1
+	0x0000 04                                               .
+type..importpath.context. SRODATA dupok size=9
+	0x0000 00 07 63 6f 6e 74 65 78 74                       ..context
+type..importpath.fmt. SRODATA dupok size=5
+	0x0000 00 03 66 6d 74                                   ..fmt
+type..importpath.time. SRODATA dupok size=6
+	0x0000 00 04 74 69 6d 65                                ..time
+gclocals·3e27b3aa6b89137cce48b3379a2a6610 SRODATA dupok size=8
+	0x0000 05 00 00 00 00 00 00 00                          ........
+gclocals·d613c0650974495413ffac8a4148e908 SRODATA dupok size=18
+	0x0000 05 00 00 00 09 00 00 00 00 00 00 01 0e 01 0f 01  ................
+	0x0010 04 01                                            ..
+"".main.stkobj SRODATA static size=40
+	0x0000 02 00 00 00 00 00 00 00 d8 ff ff ff 10 00 00 00  ................
+	0x0010 10 00 00 00 00 00 00 00 e8 ff ff ff 10 00 00 00  ................
+	0x0020 10 00 00 00 00 00 00 00                          ........
+	rel 20+4 t=5 runtime.gcbits.02+0
+	rel 36+4 t=5 runtime.gcbits.02+0
+"".main.opendefer SRODATA dupok size=3
+	0x0000 61 01 08                                         a..
+gclocals·33cdeccccebe80329f1fdbee7f5874cb SRODATA dupok size=8
+	0x0000 01 00 00 00 00 00 00 00                          ........
+"".sub_process.wrapinfo SRODATA static dupok size=4
+	0x0000 00 00 00 00                                      ....
+	rel 0+4 t=5 "".sub_process+0
+gclocals·6f4a1e03f18b58a9f5d23690b02b27f8 SRODATA dupok size=15
+	0x0000 07 00 00 00 04 00 00 00 0c 04 04 04 00 00 00     ...............
+gclocals·6490036fc203ff65ba670fc0513aad4a SRODATA dupok size=22
+	0x0000 07 00 00 00 0e 00 00 00 00 00 04 00 07 00 84 02  ................
+	0x0010 00 00 20 28 00 28                                .. (.(
+"".sub_process.stkobj SRODATA static size=56
+	0x0000 03 00 00 00 00 00 00 00 a8 ff ff ff 18 00 00 00  ................
+	0x0010 18 00 00 00 00 00 00 00 c0 ff ff ff 20 00 00 00  ............ ...
+	0x0020 20 00 00 00 00 00 00 00 e0 ff ff ff 20 00 00 00   ........... ...
+	0x0030 20 00 00 00 00 00 00 00                           .......
+	rel 20+4 t=5 runtime.gcbits.04+0
+	rel 36+4 t=5 runtime.gcbits.0a+0
+	rel 52+4 t=5 runtime.gcbits.0a+0
+"".sub_process.arginfo1 SRODATA static dupok size=11
+	0x0000 00 08 fe 08 08 10 08 fd 18 08 ff                 ...........
+"".sub_process.argliveinfo SRODATA static dupok size=3
+	0x0000 00 00 07                                         ...
+"".sub_job.wrapinfo SRODATA static dupok size=4
+	0x0000 00 00 00 00                                      ....
+	rel 0+4 t=5 "".sub_job+0
+gclocals·69200cbd9e426760e8018fb36e22123d SRODATA dupok size=13
+	0x0000 05 00 00 00 05 00 00 00 12 12 02 00 00           .............
+gclocals·21f924b7fd155fd54dab64b6f0a6620f SRODATA dupok size=13
+	0x0000 05 00 00 00 08 00 00 00 00 0a a0 a0 00           .............
+"".sub_job.stkobj SRODATA static size=40
+	0x0000 02 00 00 00 00 00 00 00 c0 ff ff ff 20 00 00 00  ............ ...
+	0x0010 20 00 00 00 00 00 00 00 e0 ff ff ff 20 00 00 00   ........... ...
+	0x0020 20 00 00 00 00 00 00 00                           .......
+	rel 20+4 t=5 runtime.gcbits.0a+0
+	rel 36+4 t=5 runtime.gcbits.0a+0
+"".sub_job.arginfo1 SRODATA static dupok size=15
+	0x0000 00 08 fe 08 08 10 08 fd fe 18 08 20 08 fd ff     ........... ...
+"".sub_job.argliveinfo SRODATA static dupok size=3
+	0x0000 00 00 1e                                         ...
